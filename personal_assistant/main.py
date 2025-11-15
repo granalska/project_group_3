@@ -109,9 +109,9 @@ class AddressBook(UserDict):
         return upcoming 
     
     def edit_email(self, name, new_email):
-        for record in self.records:
-            if record.name.lower() == name.lower():
-                record.address = new_address
+        for record in self.data.values:
+            if record.name.value.lower() == name.lower():
+                record.address = new_email
                 print(f"Address for '{name}' update")
                 return
             print("Contact not found")
